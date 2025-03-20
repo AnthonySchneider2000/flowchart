@@ -14,9 +14,10 @@ interface FlowchartState {
   addNode: (parentId: string) => void
   updateNodeText: (id: string, text: string) => void
   deleteNode: (id: string) => void
+  getAncestors: (nodeId: string) => string[]
 }
 
-export const useFlowchartStore = create<FlowchartState>((set) => ({
+export const useFlowchartStore = create<FlowchartState>((set, get) => ({
   nodes: {
     root: {
       id: 'root',
@@ -87,5 +88,18 @@ export const useFlowchartStore = create<FlowchartState>((set) => ({
     return {
       nodes: newNodes
     }
-  })
+  }),
+
+  getAncestors: (nodeId: string) => {
+    const ancestors: string[] = []
+    const nodes = get().nodes
+    let currentNode = nodes[nodeId]
+    
+    while (currentNode && currentNode.parentId) {
+      ancestors.unshift(currentNode.parentId)
+      currentNode = nodes[currentNode.parentId]
+    }
+    
+    return ancestors
+  }
 }))
