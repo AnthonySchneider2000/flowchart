@@ -51,8 +51,6 @@ function Header() {
     <header className="sticky top-0 z-10 w-full border-b bg-background">
       <div className="flex h-16 items-center w-full px-4">
         <SidebarTrigger />
-
-        {/* <MenuButton /> */}
         <div className="flex-1 flex justify-center font-medium">Flowchart</div>
         <div className="w-14 flex justify-end">
           <ThemeToggle />
@@ -60,13 +58,4 @@ function Header() {
       </div>
     </header>
   );
-
-  function MenuButton() {
-    return <div className="w-14">
-      <Button variant="ghost" size="icon">
-        <Menu className="h-5 w-5" />
-        <span className="sr-only">Menu</span>
-      </Button>
-    </div>;
-  }
 }
