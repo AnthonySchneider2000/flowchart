@@ -53,7 +53,7 @@ function Header() {
         <SidebarTrigger />
 
         {/* <MenuButton /> */}
-        <div className="flex-1 flex justify-center font-medium">Title</div>
+        <div className="flex-1 flex justify-center font-medium">Flowchart</div>
         <div className="w-14 flex justify-end">
           <ThemeToggle />
         </div>
