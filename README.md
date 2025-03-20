@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Interactive Flowchart Builder
+
+A simple yet powerful web-based flowchart tool built with Next.js and React. Create and visualize hierarchical structures in an intuitive tree-like interface.
+
+## Features
+
+- 🌳 Tree-style flowchart visualization
+- ✏️ Editable node content
+- 🔄 Interactive navigation through nodes
+- ➕ Add child nodes with one click
+- ❌ Delete nodes and their descendants
+- 🌓 Dark/Light mode support
+- 📱 Responsive design
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- [Bun](https://bun.sh/) package manager
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   bun install
+   ```
+
+### Development
+
+Run the development server:
+```
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+bun run build
+bun run start
+```
 
-## Learn More
+## How to Use
 
-To learn more about Next.js, take a look at the following resources:
+1. Start with the root node
+2. Click the + button on any active node to add a child
+3. Click on any node to make it active and see its:
+   - Complete ancestor chain
+   - Sibling nodes
+   - Child nodes
+4. Edit node text by clicking the input field
+5. Delete unwanted nodes using the X button (except ancestors of the active node)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/) - React framework
+- [React](https://reactjs.org/) - UI library
+- [Zustand](https://github.com/pmndrs/zustand) - State management
+- [shadcn/ui](https://ui.shadcn.com/) - Component library
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
 
-## Deploy on Vercel
+## Development Status
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is under active development. Feel free to contribute by submitting issues or pull requests.
